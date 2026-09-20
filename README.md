@@ -1,41 +1,31 @@
-# Glacier
+# Glacier – Frozen in Time
 
-Full-bleed cinematic "exhibition" landing page. Vite + React 19 + TypeScript + Tailwind CSS v4 + framer-motion.
+A full-screen, cinematic "exhibition" landing page about the world's vanishing ice.
+
+## Features
+- Full-screen hero with a background video and the headline "Frozen in Time"
+- Elegant serif typography (Playfair Display + Inter)
+- "Enter Exhibit" call-to-action and floating glass-style icon dock
+- Smooth animations with Framer Motion
+
+## Tech Stack
+React 19 • TypeScript • Vite • Tailwind CSS v4 • Framer Motion
 
 ## Setup
-
 ```bash
 npm install
 npm run dev
 ```
 
-## Required manual step — the hero background video
-
-`src/components/Hero.tsx` points at `/hero.mp4`, which is **not** included in this
-folder (the sandbox that generated the project could not reach the CDN host).
-Download it once before running:
+## Hero background video
+The hero video is not stored in this repo. Download it once before running:
 
 ```bash
-curl -L -o public/hero.mp4 \
-  https://pub-1e5b4001b36b47e28e6a2fb775966a79.r2.dev/templates/glacier/hero.mp4
+curl -L -o public/hero.mp4 https://pub-1e5b4001b36b47e28e6a2fb775966a79.r2.dev/templates/glacier/hero.mp4
 ```
 
-Until that file exists the page renders correctly but with a black background
-behind the lockup.
+Without it, the page still works but shows a black background behind the logo.
 
-## Structure
-
-```
-index.html              Google Fonts (Playfair Display + Inter)
-src/index.css           @import "tailwindcss" + base layer reset
-src/App.tsx             <Navbar /> + <Hero />
-src/components/Navbar.tsx   floating glass icon dock, layoutId sliding highlight
-src/components/Hero.tsx     brand lockup, headline, oval button, footer bar
-```
-
-## Scripts
-
-- `npm run dev` — dev server
-- `npm run build` — `tsc -b && vite build`
-- `npm run lint` — eslint
-- `npm run preview` — preview the production build
+## About
+Built by Shamili V, B.Tech ECE student at Sri Eshwar College of Engineering.
+[LinkedIn](https://www.linkedin.com/in/shamili-vijayakumar-4731b6425)
